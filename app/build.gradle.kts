@@ -6,7 +6,9 @@ plugins {
 android {
     namespace = "com.example.wheather_app_kotlin"
     compileSdk = 34
-
+    buildFeatures {
+        viewBinding = true
+    }
     defaultConfig {
         applicationId = "com.example.wheather_app_kotlin"
         minSdk = 24
@@ -36,7 +38,11 @@ android {
 }
 
 dependencies {
-
+    // GSON converter
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+// retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.airbnb.android:lottie:6.3.0")
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
